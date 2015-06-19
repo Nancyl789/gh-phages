@@ -44,7 +44,7 @@ rtrain2$classe<-factor(rtrain2$classe)
 ## Building Prediction Models
 
 
-The method I used to build the prediction model is randomForest. I also use randomForest() function instead of train() to build the model. Since randomForest function needs big RAM to run, I have to use 40% of the clean data from above as the training set and use a 5 fold cross validation and the testing set (60% clean data) to test the model. Only very small portions of red points missed in the plots. The oob(out of bag) error is only 1.29% for the validation of the model when rf use 40 to 50 variables in the model building. 
+The method I used to build the prediction model is randomForest. I also use randomForest() function instead of train() to build the model. Since randomForest function needs big RAM to run, I have to use 40% of the clean data from above as the training set and use a 5 fold cross validation and the testing set (60% clean data) to test the model. Only very small portions of red points missed in the plots. The oob(out of bag) error is only 1.29% for the validation of the model when rf use 40 to 50 variables in the model building. The accuracy is 98.71% 
 
 I estimated the cross validation and test set should be the same error rate since they from the same experiment(same collecting method) and same set of data.
 
@@ -52,7 +52,7 @@ On testing set, which is the other part of data from cleaned NAs otherwise than 
 
 The error rate of testing data prediction calculated as: 
 (20+42+62+10+5)/(3356+2278+1907+2156)=0.014 
-based on the data in the table.
+based on the data in the table. The accurarcy rate is: 98.6%
 
 I got 100% prediction right on the 20 sample test set.
 
